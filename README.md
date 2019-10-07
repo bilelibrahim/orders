@@ -20,7 +20,7 @@ I develop and debug directly from JetBrains IntelliJ. The default Spring profile
 
 ## Creating Sample Data
 
-Create sample data for each service. Requires Kafka is running. Endpoints for Zuul, when using Docker Swarm/Stack, are different. See this [Python script](https://github.com/bilel/storefront-kafka-docker/blob/master/refresh.py) for Zuul endpoints.
+Create sample data for each service. Requires Kafka is running. Endpoints for Zuul, when using Docker Swarm/Stack, are different. See this [Python script](https://github.com/bilel/kafka-docker/blob/master/refresh.py) for Zuul endpoints.
 
 ```bash
 # accounts - create sample customer accounts
@@ -51,15 +51,15 @@ $ docker container ls
 
 ```text
 CONTAINER ID        IMAGE                                        COMMAND                  CREATED             STATUS              PORTS                                  NAMES
-ccf0e9a0637d        bilel/storefront-fulfillment:latest   "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8080/tcp                               storefront_fulfillment.1.0mht01m6nk461q7mt1ey4zsjb
+ccf0e9a0637d        bilel/fulfillment:latest   "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8080/tcp                               storefront_fulfillment.1.0mht01m6nk461q7mt1ey4zsjb
 f8a4654183cb        hlebalbau/kafka-manager:latest               "/kafka-manager/bin/…"   11 minutes ago      Up 11 minutes                                              storefront_kafka_manager.1.so9h6c8veemrwlznj5zdk3sdw
-fe6579d68846        bilel/storefront-accounts:latest      "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8080/tcp                               storefront_accounts.1.nafdn02w68nixyvmz7l46kzcq
-2495802b640b        bilel/storefront-eureka:latest        "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8761/tcp                               storefront_eureka.1.x2tu8vg1dnizx61lwnudrnsml
+fe6579d68846        bilel/accounts:latest      "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8080/tcp                               storefront_accounts.1.nafdn02w68nixyvmz7l46kzcq
+2495802b640b        bilel/eureka:latest        "java -jar -Djava.se…"   11 minutes ago      Up 11 minutes       8761/tcp                               storefront_eureka.1.x2tu8vg1dnizx61lwnudrnsml
 5afe1e94162f        wurstmeister/kafka:latest                    "start-kafka.sh"         12 minutes ago      Up 11 minutes                                              storefront_kafka.1.n55qrkbqfueg1sgz0fb9h47qu
 44a9d4dbdc4b        mongo:latest                                 "docker-entrypoint.s…"   12 minutes ago      Up 11 minutes       27017/tcp                              storefront_mongo.1.tfy3u2zi4bpcmb7372ihdjmbc
-23be66801ebc        bilel/storefront-orders:latest        "java -jar -Djava.se…"   12 minutes ago      Up 11 minutes       8080/tcp                               storefront_orders.1.bo5hfnqb9ijbfd7vp88hcs3vn
+23be66801ebc        bilel/orders:latest        "java -jar -Djava.se…"   12 minutes ago      Up 11 minutes       8080/tcp                               storefront_orders.1.bo5hfnqb9ijbfd7vp88hcs3vn
 bbe4dbe00048        wurstmeister/zookeeper:latest                "/bin/sh -c '/usr/sb…"   12 minutes ago      Up 12 minutes       22/tcp, 2181/tcp, 2888/tcp, 3888/tcp   storefront_zookeeper.1.ipfwro51ob6fpls26bk14lvkt
-98b8084f0162        bilel/storefront-zuul:latest          "java -jar -Djava.se…"   12 minutes ago      Up 12 minutes       8761/tcp                               storefront_zuul.1.u4h4bxp01mcwetyoezk19ljzt
+98b8084f0162        bilel/zuul:latest          "java -jar -Djava.se…"   12 minutes ago      Up 12 minutes       8761/tcp                               storefront_zuul.1.u4h4bxp01mcwetyoezk19ljzt
 ```
 
 ## Orders Customer Object in MongoDB
