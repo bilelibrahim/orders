@@ -32,13 +32,13 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("Storefront Demo - Orders API")
                 .description("Spring Boot demo application, backed by MongoDB and Kafka.")
-                .termsOfServiceUrl("https://programmaticponderings.com")
+                .termsOfServiceUrl("")
                 .contact(new Contact(
                         "Bilel I",
-                        "https://programmaticponderings.com/about",
+                        "",
                         "bilel.brahim@gmail.com"))
                 .license("Apache License Version 2.0")
-                .licenseUrl("https://github.com/bilel/demo-orders/blob/master/LICENSE")
+                .licenseUrl("https://github.com/bilelibrahim/demo-orders/blob/master/LICENSE")
                 .version("2.1.0")
                 .build();
     }
